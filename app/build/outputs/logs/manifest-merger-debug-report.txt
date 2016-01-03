@@ -25,6 +25,9 @@ ADDED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.
 		ADDED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.xml:8:9-37
 application
 ADDED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.xml:9:5-23:19
+MERGED from [com.commonsware.cwac:security:0.5.2] C:\Users\Evan\CS\Android\Busy\EmPubLite\app\build\intermediates\exploded-aar\com.commonsware.cwac\security\0.5.2\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-v13:23.1.1] C:\Users\Evan\CS\Android\Busy\EmPubLite\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Evan\CS\Android\Busy\EmPubLite\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.xml:12:9-41
 	android:allowBackup
@@ -51,6 +54,9 @@ ADDED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.
 		ADDED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.xml:20:27-74
 uses-sdk
 INJECTED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.commonsware.cwac:security:0.5.2] C:\Users\Evan\CS\Android\Busy\EmPubLite\app\build\intermediates\exploded-aar\com.commonsware.cwac\security\0.5.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v13:23.1.1] C:\Users\Evan\CS\Android\Busy\EmPubLite\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Evan\CS\Android\Busy\EmPubLite\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Evan\CS\Android\Busy\EmPubLite\app\src\main\AndroidManifest.xml
