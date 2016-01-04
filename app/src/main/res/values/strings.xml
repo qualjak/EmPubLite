@@ -3,5 +3,7 @@
 
     <string name="app_name">EmPub Lite</string>
     <string name="hello_world">Hello world!</string>
+    <string name="about">About</string>
+    <string name="help">Help</string>
 
 </resources>
