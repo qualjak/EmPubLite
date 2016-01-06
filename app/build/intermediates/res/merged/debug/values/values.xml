@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/Evan/CS/Android/Busy/EmPubLite/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/C:/Users/Evan/CS/Android/Busy/EmPubLite/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="about">About</string>
     <string name="app_name">EmPub Lite</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="help">Help</string>
     <!-- From: file:/C:/Users/Evan/CS/Android/Busy/EmPubLite/app/src/main/res/values/styles.xml -->
