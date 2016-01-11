@@ -3,27 +3,51 @@ package com.commonsware.empublite;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import de.greenrobot.event.EventBus;
+
 public class EmPubLiteActivity extends Activity {
     private ViewPager pager = null;
     private ContentsAdapter adapter = null;
+    private static final String MODEL = "model";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setupStrictMode();
+
         setContentView(R.layout.main);
 
         pager = (ViewPager) findViewById(R.id.pager);
+    }
 
-        adapter = new ContentsAdapter(this);
-        pager.setAdapter(adapter);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        EventBus.getDefault().register(this);
 
-        findViewById(R.id.progressBar1).setVisibility(View.GONE);
-        pager.setVisibility(View.VISIBLE);
+        if (adapter == null) {
+            ModelFragment mfrag =
+                    (ModelFragment) getFragmentManager().findFragmentByTag(MODEL);
+            if (mfrag == null) {
+                getFragmentManager().beginTransaction()
+                        .add(new ModelFragment(), MODEL).commit();
+            } else if (mfrag.getBook() != null) {
+                setupPager(mfrag.getBook());
+            }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        EventBus.getDefault().unregister(this);
     }
 
     @Override
@@ -47,5 +71,28 @@ public class EmPubLiteActivity extends Activity {
                 return (true);
         }
         return (super.onOptionsItemSelected(item));
+    }
+
+    private void setupPager(BookContents contents) {
+        adapter = new ContentsAdapter(this, contents);
+        pager.setAdapter(adapter);
+        findViewById(R.id.progressBar1).setVisibility(View.GONE);
+        pager.setVisibility(View.VISIBLE);
+    }
+
+    @SuppressWarnings("unused")
+    public void onEventMainThread(BookLoadedEvent event) {
+        setupPager(event.getBook());
+    }
+
+    private void setupStrictMode() {
+        StrictMode.ThreadPolicy.Builder builder =
+                new StrictMode.ThreadPolicy.Builder()
+                        .detectAll()
+                        .penaltyLog();
+        if (BuildConfig.DEBUG) {
+            builder.penaltyFlashScreen();
+        }
+        StrictMode.setThreadPolicy(builder.build());
     }
 }
