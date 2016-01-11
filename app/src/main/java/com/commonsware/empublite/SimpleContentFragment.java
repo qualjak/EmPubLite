@@ -8,7 +8,6 @@ import android.webkit.WebViewFragment;
 public class SimpleContentFragment extends WebViewFragment {
     private static final String KEY_FILE = "file";
 
-    //we want a parameter passed in, but new SimpleContentFragment(string) is invalid
     protected static SimpleContentFragment newInstance(String file) {
         SimpleContentFragment f = new SimpleContentFragment();
         Bundle args = new Bundle();
