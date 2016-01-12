@@ -30,6 +30,8 @@
         </activity>
         <activity android:name="com.commonsware.empublite.SimpleContentActivity" >
         </activity>
+        <activity android:name="com.commonsware.empublite.Preferences" >
+        </activity>
     </application>
 
 </manifest>
